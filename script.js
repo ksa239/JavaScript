@@ -55,9 +55,6 @@ function computerPlay() {
   return randomItem;
 }
 
-const playerSelection = prompt(
-  "Enter one of these (paper, rock, scissors) in lowerCase ?"
-);
 /* console.log(playerSelection); */
 let computerSelection = computerPlay();
 /* console.log(computerSelection); */
@@ -66,6 +63,8 @@ console.log(Game());
 
 function Game() {
   for (let i = 0; i < 5; i++) {
+    const playerSelection = prompt(
+  "Enter one of these (paper, rock, scissors) in lowerCase ?");
     console.log(playRound(playerSelection, computerSelection));
     computerSelection = computerPlay();
   }
